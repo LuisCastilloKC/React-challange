@@ -7,14 +7,21 @@ const FULL_STAR =
 
 const FiveStartsRating = () => {
 
-    const StartIds = [1,2,3,4,5];
+    const startIds = [1,2,3,4,5];
 
     const [hovered, setHovered] = useState(0)
     const [clicked, setClicked] = useState(0)
 
+    const getImg = (id) =>{
+        return hovered >= id || clicked >= id ? FULL_STAR : EMPTY_STAR
+    }
+
     return( 
     <div>
-
+        {startIds.map((id) =>(
+            <img src={getImg(id)}
+                ></img>
+        ))}
     </div>
 
     )
