@@ -7,9 +7,14 @@ const FULL_STAR =
 
 const FiveStartsRating = () => {
 
+    const StartIds = [1,2,3,4,5];
+
+    const [hovered, setHovered] = useState(0)
+    const [clicked, setClicked] = useState(0)
+
     return( 
     <div>
-        
+
     </div>
 
     )
