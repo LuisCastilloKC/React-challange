@@ -20,7 +20,10 @@ const FiveStartsRating = () => {
     <div>
         {startIds.map((id) =>(
             <img src={getImg(id)}
-                ></img>
+                onMouseEnter={()=>{
+                setHovered(id)
+                    if(id < clicked) setClicked(0)
+                }}></img>
         ))}
     </div>
 
