@@ -17,13 +17,20 @@ const FiveStartsRating = () => {
     }
 
     return( 
-    <div>
+    <div style ={{ display: "flex",
+    justifyContent: "center",
+    padding: "30px"}}>
+        
         {startIds.map((id) =>(
             <img src={getImg(id)}
                 onMouseEnter={()=>{
                 setHovered(id)
                     if(id < clicked) setClicked(0)
-                }}></img>
+                }}
+                onClick={()=> setClicked(id)}
+                onMouseOut={()=>setHovered(0)}
+                width={50}
+                height={50}></img>
         ))}
     </div>
 
